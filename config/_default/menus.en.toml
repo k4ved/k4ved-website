@@ -11,12 +11,6 @@
   url = "/post/"
 
   [[main]]
-  name = "About"
-  weight = 300
-  identifier = "about"
-  url = "/about/"
-
-  [[main]]
   name = "Contact"
   weight = 400
   identifier = "contact"
