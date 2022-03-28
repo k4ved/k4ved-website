@@ -18,7 +18,7 @@ Thats where the fun began. At the time we started with Crowdstrike they did not 
 
 Jamf’s support also doesn’t support crowdstrike in return, but was helpful to provide some steps that helped get closer to an install, but they also didn’t work well and depended on the end-users clicking the Crowdstrike Falcon pop-up to get going. This isn’t ideal as not all users are in-front of their computer when pushed, if they did not click in time, the install would fail.
 
-With all that said, Crowdstrike has now put together some documentation that with a caveat I'll talk about at the end, mostly solves the problem. Here are the instructions you need.
+With all that said, Crowdstrike has now put together some documentation that, with a caveat that I'll talk about at the end, mostly solves the problem. Here are the instructions you need.
 
 ## How to install Crowdstrike with Jamf Pro
 
@@ -86,6 +86,7 @@ TeamID: X9E956P446
 ```
 
 ### Scoping
+
 When you scope these two policies, all computers in your organization should get the all computers policy. Using a smart group, you should make a group to narrow down to just Catalina and scope that group to the Catalina policy also. Both policies should be installed on Catalina, but only one on every other OS. If you’re running older than Catalina, you should upgrade them first.
 
 ### Caveat while building the install policy
