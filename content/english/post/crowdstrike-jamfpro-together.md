@@ -18,7 +18,7 @@ Thats where the fun began. At the time we started with Crowdstrike they did not 
 
 Jamf’s support also doesn’t support crowdstrike in return, but was helpful to provide some steps that helped get closer to an install, but they also didn’t work well and depended on the end-users clicking the Crowdstrike Falcon pop-up to get going. This isn’t ideal as not all users are in-front of their computer when pushed, if they did not click in time, the install would fail.
 
-Crowdstrike has taken the time to provide updated steps for installing Crowdstrike with Jamf Pro in their customer support portal, and I’m going to outline them below. I want to be clear, these are Crowdstrike’s recommended steps based on their portal as of the time of writing this (so I take no credit), they are better and work well, with some small caveats that I’ll call out. I decided to re-write them into this blog because they don’t appear in search results, leaving a lot of people still banging their head.
+With all that said, Crowdstrike has now put together some documentation that with a caveat I'll talk about at the end, mostly solves the problem. Here are the instructions you need.
 
 ## How to install Crowdstrike with Jamf Pro
 
@@ -92,7 +92,9 @@ When you scope these two policies, all computers in your organization should get
 
 Installing is easy, upload the image, create a policy to install that application, and done. No bash scripts for licenses required, installs like every other application, with one exception.
 
-The Falcon installer doesn’t handle being installed “again”. IE, if you push out new policies or changes to your installer policy, it will simply show all your devices failing. When you dig into the error on Google you will find lots of results, but no real answers.
+The Falcon installer doesn’t handle being installed “again”. IE, if you push out new policies or changes to your installer policy, it will simply show all your devices failing. When you dig into the error on Google you will find lots of results, but no real answers. Heres the short version of whats really happening;
+
+When the installer exits out, it doesn't send an exit code 0. This is because the installer technically did fail, even though it simply just exited because Falcon is already installed. Jamf can't tell what the installer should have done, so it just sees the exit code is not successful, and therefore the install is a failure.
 
 My recommended approach is to change your policy to install on computers where Falcon is not already installed using smart groups. This makes sure that it’s the first time install. Falcon takes care of updating itself, so no future monitoring in Jamf is required. The smart group to create is as follows:
 
