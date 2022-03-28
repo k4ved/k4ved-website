@@ -13,7 +13,7 @@ customCss = []
 customJs = []
 mainSections = ["post"]
 images = ["images/site-feature-image.png"]
-doNotLoadAnimations = false
+doNotLoadAnimations = true
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
 # Google Fonts
@@ -23,6 +23,7 @@ doNotLoadAnimations = false
 singleDateFormat = "1/2/2006"
 indexDateFormat = "1/2/2006"
 listDateFormat = "1/2/2006"
+disableThemeSwitcher = false
 # Commento Comments
 # CommentoURL = "https://commento.example.com/js/commento.js"
 # Read More links for truncated summaries
@@ -55,22 +56,22 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
-# [[socialIcons]]
-# icon = "fab fa-linkedin"
-# title = "Linkedin"
-# url = "https://de.linkedin.com/"
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/k4ved"
 
 # [[socialIcons]]
 # icon = "fab fa-github"
 # title = "GitHub"
 # url = "https://github.com/lxndrblz/anatole/"
 
-# [[socialIcons]]
-# icon = "fab fa-twitter"
-# title = "Twitter"
-# url = "https://www.instagram.com/"
+[[socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://www.twitter.com/RealAndyJames/"
 
-# [[socialIcons]]
-# icon = "fas fa-envelope"
-# title = "e-mail"
-# url = "mailto:mail@example.com"
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:andy@andyjames.org"
