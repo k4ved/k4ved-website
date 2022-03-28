@@ -15,7 +15,7 @@ mainSections = ["post"]
 images = ["images/site-feature-image.png"]
 doNotLoadAnimations = true
 # Form Spree Contact Form
-#contactFormAction = "https://formspree.io/f/your-form-hash-here"
+contactFormAction = "https://getform.io/f/050040fa-f56c-4032-b76e-b7a58edfbf5a"
 # Google Fonts
 #googleFonts = ["Indie+Flower", "Roboto:ital,wght@0,100;0,400;0,700;1,400"]
 # Google Site Verify
@@ -61,17 +61,12 @@ icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "https://www.linkedin.com/in/k4ved"
 
-# [[socialIcons]]
-# icon = "fab fa-github"
-# title = "GitHub"
-# url = "https://github.com/lxndrblz/anatole/"
+[[socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/k4ved"
 
 [[socialIcons]]
 icon = "fab fa-twitter"
 title = "Twitter"
 url = "https://www.twitter.com/RealAndyJames/"
-
-[[socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "mailto:andy@andyjames.org"

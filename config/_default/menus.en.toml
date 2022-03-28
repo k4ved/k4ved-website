@@ -17,7 +17,13 @@
   url = "/about/"
 
   [[main]]
-  name = "Contact"
+  name = "My Projects"
   weight = 400
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+  [[main]]
+  name = "Contact"
+  weight = 500
   identifier = "contact"
   url = "/contact/"
